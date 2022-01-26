@@ -1,17 +1,17 @@
 /***** ESTILOS GENERALES *****/
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Indie Flower', sans-serif;
 }
 
-/***** RESPONSIVE *****/ 
+/***** RESPONSIVE *****/
 /*** Smartphones ***/
 
 body {
     width: 100%;
     height: 100%;
-    background-color: #bcd4e6; 
+    background-color: #bcd4e6;
 }
 
 /* Estilos Menu */
@@ -30,7 +30,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     list-style-type: none;
-    background-color:  #fad2e1;
+    background-color: #fad2e1;
 }
 
 h2 {
@@ -63,7 +63,7 @@ header {
     font-size: medium;
     font-weight: bold;
     text-align: center;
-    text-shadow: 1px 2px  #f8f1f1;
+    text-shadow: 1px 2px #f8f1f1;
     color: rgba(255, 1, 213, 0.918);
 }
 
@@ -72,7 +72,7 @@ header {
     font-size: large;
     font-weight: bold;
     margin: 10%;
-    text-shadow: 1px 2px  #e7e5e5;
+    text-shadow: 1px 2px #e7e5e5;
     color: rgba(233, 20, 20, 0.918);
 }
 
@@ -104,6 +104,7 @@ footer li {
     border: outset 4px #fde2e4;
     position: relative;
 }
+
 article {
     background-color: #fff;
     border-radius: 5px;
@@ -111,11 +112,12 @@ article {
     text-align: center;
     font-size: 0.75rem;
 }
+
 .nombres {
     color: grey;
     background-color: lavenderblush;
     font-size: 1.5rem;
-    margin: 10px;  
+    margin: 10px;
 }
 
 /* Estilos formularios */
@@ -131,8 +133,8 @@ article {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content:space-between;   
-} 
+    justify-content: space-between;
+}
 
 .imgNosotros {
     display: flex;
@@ -159,41 +161,62 @@ article {
     justify-content: center;
 }
 
- /***** GRIDS POR AREAS *****/
-    /* Estructura */
-    #gridAreas {
-        display: grid;
-        grid-template-areas: 
+
+/*** Animacion ***/
+.tituloAnimado {
+    animation-name: tituloAnimado;
+    animation-iteration-count: 1;
+    animation-duration: 2s;    
+    }
+
+   @keyframes tituloAnimado {
+       from {
+           transform: translate(-500px);
+           opacity: 0;
+       }
+       
+       to{
+           transform: translate(0);
+           opacity: 1;
+        }
+    }   
+
+/***** GRIDS POR AREAS *****/
+/* Estructura */
+#gridAreas {
+    display: grid;
+    grid-template-areas:
         "navegador"
         "header"
         "imagenes"
-        "texto" 
+        "texto"
         "footer";
-    
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 70px 1fr 1fr 75px;
-    }
-      
-    /* Nombre areas */
-    header {
-        grid-area: header;
-    }
-    
-    footer {
-        grid-area: footer;
-    }
-    
-    section #imagenes {
-        grid-area: imagenes;
-    }
-    
-    section #texto {
-        grid-area: texto;
-    }
-    
-    nav {
-        grid-area: navegador;
-    }
+
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 70px 1fr 1fr 75px;
+}
+
+/* Nombre areas */
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+section #imagenes {
+    grid-area: imagenes;
+}
+
+section #texto {
+    grid-area: texto;
+}
+
+nav {
+    grid-area: navegador;
+}
+
 
 
 
@@ -205,59 +228,61 @@ article {
     body {
         width: 100%;
         height: 100%;
-        background-color: #dbf6d8; 
+        background-color: #deebdd;
+        background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
     }
 
-     /***** GRIDS POR AREAS *****/
+    /***** GRIDS POR AREAS *****/
     /* Estructura */
     #gridAreas {
         display: grid;
-        grid-template-areas: 
-        "navegador header"
-        "navegador imagenes" 
-        "navegador texto" 
-        "footer footer" ;
-    
+        grid-template-areas:
+            "navegador header"
+            "navegador imagenes"
+            "navegador texto"
+            "footer footer";
+
         grid-template-columns: 15% 85%;
         grid-template-rows: 50px 80% auto 70px;
         grid-column-gap: 5px;
-        grid-row-gap: 5px ;
+        grid-row-gap: 5px;
     }
+
     header {
         border: dashed #a8dadc 2px;
         background-color: #efffe9;
         text-transform: uppercase;
         text-align: center;
     }
-    
+
     /* Estilos Menu */
     .navbarItems a {
         text-decoration: none;
         color: #77dd77;
     }
-    
+
     .navbarItems a:hover {
         color: red;
         font-size: 1rem;
     }
-    
+
     .navbarItems {
         background-color: #fdfd96;
         border: dashed #a8dadc 2px;
         position: relative;
     }
-    
+
     .navbarItems2 {
         text-align: start;
         list-style: none;
     }
-    
+
     .navbarTitulo {
         color: #560bad;
         display: inline-block;
         text-shadow: 1px 2px #b5179e;
     }
-    
+
     /* Estilos iframe */
     .video {
         background-color: white;
@@ -267,24 +292,24 @@ article {
         height: 100%;
         margin-left: 50px;
     }
-    
+
     /* Estilos textos */
     .textos {
         text-align: center;
         line-height: 1.6;
         font-size: large;
         font-weight: bold;
-        text-shadow: 2px 3px  #faf9f9;
+        text-shadow: 2px 3px #faf9f9;
         color: rgba(255, 4, 4, 0.918);
         margin: 4%;
     }
-    
+
     .textoDonacion {
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
         margin: 10%;
-        text-shadow: 1px 2px  #e7e5e5;
+        text-shadow: 1px 2px #e7e5e5;
         color: rgba(233, 20, 20, 0.918);
     }
 
@@ -297,7 +322,7 @@ article {
         margin: 3px;
         border: double black 5px;
     }
-    
+
     .footerItems {
         background-color: grey;
         text-align: end;
@@ -307,7 +332,7 @@ article {
     footer li {
         display: inline-block;
     }
-    
+
     /*  Estilos galeria */
     .card {
         background-color: white;
@@ -316,6 +341,7 @@ article {
         border: dashed 4px #a8dadc;
         position: relative;
     }
+
     article {
         background-color: #fff;
         border-radius: 5px;
@@ -323,13 +349,14 @@ article {
         text-align: center;
         font-size: 0.75rem;
     }
+
     .nombres {
         color: grey;
         font-size: 2rem;
         margin: 5px;
         background-color: #dbf6d8;
     }
-    
+
     /* Estilos formularios */
     .formulario {
         background-color: lightgrey;
@@ -337,33 +364,33 @@ article {
         padding: 50px;
         margin: 50px;
     }
-    
+
     /***** FLEXBOX *****/
     .menuFlex {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: end;
-    } 
-    
+    }
+
     .imgNosotros {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
     }
-    
+
     .flexParrafoNosotros {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
     }
-    
+
     .galeria {
         display: flex;
         flex-flow: column nowrap;
-    } 
-   
+    }
+
 }
 
 
@@ -375,30 +402,32 @@ article {
     body {
         width: 100vh;
         height: 100vh;
-        background-color: #bcd4e6; 
+        background-color: #bcd4e6;
     }
-    
+
     header {
-        background-color: #99c1de;
+        background-color: #63a4ff;
+        background-image: linear-gradient(315deg, #83eaf1 0%, #63a4ff 74%);
         border: solid #a8dadc 2px;
     }
-    
+
     /* Estilos Menu */
     .navbarItems a {
         text-decoration: none;
         color: white;
     }
-    
+
     .navbarItems a:hover {
         color: red;
         font-size: 1.5rem;
     }
-    
+
     .navbarItems {
         list-style: none;
-        background-color: #fad2e1;
+        background-color: #ffd9de;
+        background-image: linear-gradient(315deg, #ffd9de 0%, #e99ba6 74%);
     }
-    
+
     .navbarItems2 {
         text-align: center;
         margin: 20px;
@@ -406,13 +435,13 @@ article {
         background-repeat: repeat;
         background-position: center;
     }
-    
+
     .navbarTitulo {
         color: #560bad;
         display: inline-block;
         text-shadow: 1px 2px #b5179e;
     }
-    
+
     /* Estilos iframe */
     .video {
         background-color: white;
@@ -422,27 +451,27 @@ article {
         width: 100vh;
         height: 100%;
     }
-    
+
     /* Estilos textos */
     .textos {
         text-align: center;
         line-height: 1.6;
         font-size: large;
         font-weight: bold;
-        text-shadow: 1px 2px  #f8f1f1;
+        text-shadow: 1px 2px #f8f1f1;
         color: rgba(255, 1, 213, 0.918);
         margin: 4%;
     }
-    
+
     .textoDonacion {
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
         margin: 10%;
-        text-shadow: 1px 2px  #e7e5e5;
+        text-shadow: 1px 2px #e7e5e5;
         color: rgba(233, 20, 162, 0.918);
     }
-    
+
     /* Estilos footer */
     footer {
         background-color: grey;
@@ -452,18 +481,18 @@ article {
         margin: 3px;
         border: double black 5px;
     }
-    
+
     .footerItems {
         background-color: grey;
         text-align: end;
         list-style: none;
-    
+
     }
-    
+
     footer li {
         display: inline-block;
     }
-    
+
     /*  Estilos galeria */
     .card {
         background-color: #f6a5f2;
@@ -472,6 +501,7 @@ article {
         border: outset 4px #fde2e4;
         position: relative;
     }
+
     article {
         background-color: #fff;
         border-radius: 5px;
@@ -479,6 +509,7 @@ article {
         text-align: center;
         font-size: 0.75rem;
     }
+
     .nombres {
         color: grey;
         background-color: lavenderblush;
@@ -486,7 +517,7 @@ article {
         margin: 5px;
         text-align: center;
     }
-    
+
     /* Estilos formularios */
     .formulario {
         background-color: lightgrey;
@@ -494,7 +525,7 @@ article {
         padding: 50px;
         margin: 50px;
     }
-    
+
 
     /***** FLEXBOX *****/
     .menuFlex {
@@ -502,49 +533,46 @@ article {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: end;
-    } 
-    
+    }
+
     .imgNosotros {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
     }
-    
+
     .flexParrafoNosotros {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
     }
-    
+
     .galeria {
         display: flex;
         flex-flow: column nowrap;
         display: inline-block;
         justify-content: space-evenly;
     }
-    
+
     .centrar {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
     }
-    
+
 
     /***** GRIDS POR AREAS *****/
     /* Estructura */
     #gridAreas {
         display: grid;
-        grid-template-areas: 
-        "header header"
-        "navegador imagenes" 
-        "navegador texto" 
-        "footer footer";
-    
+        grid-template-areas:
+            "header header"
+            "navegador imagenes"
+            "navegador texto"
+            "footer footer";
+
         grid-template-columns: 20% 115%;
         grid-template-rows: 50px 60% 60% 70px;
     }
 }
-
-
-
